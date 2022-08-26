@@ -11,6 +11,7 @@ import (
 	"github.com/shopspring/decimal"
 )
 
+//读写互斥锁mutex，？？？？？
 // 函数<<<<<<<<<<<<<<
 func func1(x ...int) (int, int) {
 	fmt.Print(x)
@@ -240,4 +241,5 @@ lable3:
 	//类型断言
 	val2, OKKK := nilInterface.(string)
 	fmt.Println(val2, OKKK)
+	// v := reflect.typeOf  反射  | v.name 类型名  v.kind	类型底层种类
 }
