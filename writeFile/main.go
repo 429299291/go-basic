@@ -10,7 +10,7 @@ import (
 
 func main() {
 	//第一种写入方式1.1
-	file, err := os.OpenFile("../file1.txt", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0666) // 创建，写入,清空
+	file, err := os.OpenFile("./file1.txt", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0666) // 创建，写入,清空
 	// file, err := os.OpenFile("../file.txt", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666) //追加
 	defer file.Close()
 	if err != nil {
@@ -29,7 +29,7 @@ func main() {
 	writer.Flush()
 	//第三种写入方式
 	var str2 = "第三种方式"
-	err2 := ioutil.WriteFile("../file3.txt", []byte(str2), 0666)
+	err2 := ioutil.WriteFile("./file3.txt", []byte(str2), 0666)
 	if err != nil {
 		fmt.Println(err2)
 		return
